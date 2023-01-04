@@ -20,8 +20,8 @@ public class FileGenerator implements Runnable{
         String folder = "D:\\sub-test1\\";
         File file = new File(folder + prefix + ".zip");
         RandomAccessFile raf = new RandomAccessFile(file, "rw");
-        //raf.setLength(ThreadLocalRandom.current().nextLong(1048576 * 500, 1048576L * 4500));
-        raf.setLength(ThreadLocalRandom.current().nextLong(1048576 , 1048576L * 5));
+        raf.setLength(ThreadLocalRandom.current().nextLong(1048576 * 500, 1048576L * 4500));
+        //raf.setLength(ThreadLocalRandom.current().nextLong(1048576 , 1048576L * 5));
         raf.close();
         return file;
     }
